@@ -1,7 +1,198 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="en">
+<head>
+  <title>User</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/login.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://use.fontawesome.com/c7a1f85735.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/list.js"></script>
+
+  <style>
+    /* Set the whole body into black*/
+    #main div{
+      height: 440px;
+      padding-top:10px;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+    body{
+      background-color: black;
+    }
+    /* Color and font size of category*/
+    .container .h3{
+      color: white;
+    }
+    .container h3 a{
+      font-size: 14px;
+    }
+    /* Remove the navbar's default rounded borders and increase the bottom margin */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */
+     .jumbotron {
+      margin-bottom: 0;
+    }
+
+/*    .Cart {
+      width: 200px;
+      height:400px;
+    }*/
+
+    .description {
+      height: 100px;
+      overflow: auto;
+    }
+
+    .thumbnail img{
+    max-height: 180px;
+}
+
+.thumbnail .description {
+    color: #7f7f7f;
+}
+
+.price{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+.listimg{
+  max-height: 80px;
+}
+
+#search {
+  width: 120px;
+  /*height: 35px;*/
+  display: inline-block;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#searchButton {
+  width: 100px;
+  /*height: 35px;*/
+  background-color: green;
+  display: inline-block;
+  border-radius: 5px;
+  text-align: center;
+}
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+  <style>
+  .carousel-inner {
+      max-height: 400px;
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      max-height: 400px;
+      /*width: 70%;*/
+      margin: auto;
+  }
+  </style>
+  
+</head>
+<body background="img/17.jpg">
+
+ <!-- First navigation bar -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Musics</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="orderHis.html">History</a></li>
+
+        <li><div class="dropdown">
+          <button aria-expanded="true" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="dropdownMenu1" type="button">Filter Music by Category <span class="caret"></span></button>
+          <ul aria-labelledby="dropdownMenu1" class="dropdown-menu">
+            <li>
+              <a href="?page=1&category=Pop" category="Pop">Pop</a>
+            </li>
+            <li>
+              <a href="?page=1&category=Clasic" category="Clasic">Clasic</a>
+            </li>
+            <li>
+              <a href="?page=1">All Musics</a>
+            </li>
+          
+          </ul>
+        </div></li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><form><input style="vertical-align:bottom;line-height:35px;height:35px;" type="text" name="search" id="search"><button type="button" id="searchButton" style="height:35px;"><span class="glyphicon glyphicon-search"></span>Search</button></form></li>
+        <li id="signinParent"><a href="login.html" id="signin"><span class="glyphicon glyphicon-user"></span> Sign In</a></li>
+        <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<div class="container">
+    <div class="row">
+      <div class="column" id="main">
+        <div class="col-sm-8 col-md-4">
+          <div class="thumbnail">
+            <div class="caption">
+              <div class="description">
+                <!-- <p class="description"></p> -->
+              </div>
+              <div class="clearfix">
+                <div class="price pull-left">
+                </div><a class="btn btn-success pull-right" href="#" role="button">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="pagination pagination-lg pull-right">
+      <ul class="pagination" id="paging_link">
+      </ul>
+    </div>
+
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Online Store Copyright</p>
+  <form class="form-inline">Get deals:
+    <input type="email" class="form-control" size="50" placeholder="Email Address">
+    <!-- <button type="button" class="btn btn-danger">Sign Up</button> -->
+  </form>
+</footer>
+
+
 </body>
 </html>
+
