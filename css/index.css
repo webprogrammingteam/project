@@ -1,0 +1,94 @@
+
+  /* Set the whole body into black*/
+  #main div{
+    height: 440px;
+    width: 1150px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  body{
+    background-color: black;
+  }
+  /* Color and font size of category*/
+  .container .h3{
+    color: white;
+    height: 200px;
+  }
+  .container h3 a{
+    font-size: 14px;
+  }
+  /* Remove the navbar's default rounded borders and increase the bottom margin */
+  .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+
+  /* Remove the jumbotron's default bottom margin */
+   .jumbotron {
+    margin-bottom: 0;
+  }
+
+/*    .Cart {
+    width: 200px;
+    height:400px;
+  }*/
+
+  .description {
+    height: 100px;
+    overflow: auto;
+  }
+
+  .thumbnail img{
+  max-height: 180px;
+}
+
+.thumbnail .description {
+  color: #7f7f7f;
+}
+
+.price{
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+.listimg{
+max-height: 80px;
+}
+
+#search {
+width: 120px;
+/*height: 35px;*/
+display: inline-block;
+border-radius: 5px;
+text-align: center;
+}
+
+#searchButton {
+width: 100px;
+/*height: 35px;*/
+background-color: green;
+display: inline-block;
+border-radius: 5px;
+text-align: center;
+}
+
+  /* Add a gray background color and some padding to the footer */
+  footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+  }
+
+.carousel-inner {
+    max-height: 400px;
+    margin-bottom: 50px;
+    border-radius: 0;
+  }
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    max-height: 400px;
+    /*width: 70%;*/
+    margin: auto;
+}
