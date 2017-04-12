@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/login.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/login.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+  <style>
+    /* Set the whole body into black*/
+    body{
+      background-color: black;
+    }
+
+    /* Color and font size of category*/
+    .container h3{
+      color: white;
+    }
+    .container h3 a{
+      font-size: 14px;
+    }
+    /* Remove the navbar's default rounded borders and increase the bottom margin */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */
+     .jumbotron {
+      margin-bottom: 0;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+  <style>
+  .carousel-inner {
+      max-height: 400px;
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      max-height: 400px;
+      /*width: 70%;*/
+      margin: auto;
+  }
+  </style>
+
+
+
+
+
+</head>
+<body background="img/17.jpg">
+
+ <!-- First navigation bar -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+      <a class="navbar-brand" href="login.html">Musics</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+     
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="login.html">Sign In</a></li>
+        <li><a href="register.html">Sign Up</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid text-center">
+  <!-- <div class="row content"> -->
+    <div id="id01" class="col-sm-16 text-left">
+  
+  <form class="modal-content animate">
+    <div class="imgcontainer">
+      <!-- <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span> -->
+      <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
+      <h1>Sign In</h1>
+    </div>
+
+    <div class="loginContainer">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" id = "username" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" id = "password" required>
+      <p id="error"></p>
+        
+      <button type="button">Login</button>
+      <!-- <input type="checkbox" checked="checked"> Remember me -->
+    </div>
+
+    <div class="loginContainer" style="background-color:#f1f1f1">
+      <a href="register.html">Not a member? Register Now!</a>
+    </div>
+  </form>
+</div>
+<!-- </div> -->
+</div>
+
+
+<footer class="container-fluid text-center">
+  <p>Music Store Copyright</p>
+  <form class="form-inline">Get deals:
+    <input type="email" class="form-control" size="50" placeholder="Email Address">
+    <!-- <button type="button" class="btn btn-danger">Sign Up</button> -->
+  </form>
+</footer>
+</body>
+</html>
+
