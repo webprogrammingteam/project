@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/login.css">
-  <link rel="stylesheet" href="css/index.css">
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -15,7 +13,101 @@
   <script src="js/index.js"></script>
   <script src="js/list.js"></script>
 
+  <style>
+    /* Set the whole body into black*/
+    #main div{
+      height: 440px;
+      padding-top:10px;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+    body{
+      background-color: black;
+    }
+    /* Color and font size of category*/
+    .container .h3{
+      color: white;
+    }
+    .container h3 a{
+      font-size: 14px;
+    }
+    /* Remove the navbar's default rounded borders and increase the bottom margin */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */
+     .jumbotron {
+      margin-bottom: 0;
+    }
 
+/*    .Cart {
+      width: 200px;
+      height:400px;
+    }*/
+
+    .description {
+      height: 100px;
+      overflow: auto;
+    }
+
+    .thumbnail img{
+    max-height: 180px;
+}
+
+.thumbnail .description {
+    color: #7f7f7f;
+}
+
+.price{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+.listimg{
+  max-height: 80px;
+}
+
+#search {
+  width: 120px;
+  /*height: 35px;*/
+  display: inline-block;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#searchButton {
+  width: 100px;
+  /*height: 35px;*/
+  background-color: green;
+  display: inline-block;
+  border-radius: 5px;
+  text-align: center;
+}
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+  <style>
+  .carousel-inner {
+      max-height: 400px;
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      max-height: 400px;
+      /*width: 70%;*/
+      margin: auto;
+  }
+  </style>
+  
 </head>
 <body background="img/17.jpg">
 
@@ -47,10 +139,10 @@
             <li>
               <a href="?page=1">All Musics</a>
             </li>
-
+          
           </ul>
         </div></li>
-
+        
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="active"><form><input style="vertical-align:bottom;line-height:35px;height:35px;" type="text" name="search" id="search"><button type="button" id="searchButton" style="height:35px;"><span class="glyphicon glyphicon-search"></span>Search</button></form></li>
@@ -71,7 +163,7 @@
           <div class="thumbnail">
             <div class="caption">
               <div class="description">
-                <p id="listOfProducts">List of Products Shown Here</p>
+                <!-- <p class="description"></p> -->
               </div>
               <div class="clearfix">
                 <div class="price pull-left">
@@ -103,3 +195,4 @@
 
 </body>
 </html>
+
